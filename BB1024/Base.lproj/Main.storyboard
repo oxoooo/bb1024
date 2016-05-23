@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5WU-1w-ozc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BB1024" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8qH-CU-3Vn">
+                                <rect key="frame" x="0.0" y="64" width="600" height="2"/>
+                            </progressView>
+                            <view hidden="YES" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEK-Fy-EFe">
+                                <rect key="frame" x="0.0" y="555" width="600" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QtJ-ak-UuI">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
+                                        <state key="normal" title="发现链接，点击复制到剪切板（有115自动离线下载）">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openuri:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgp-iE-TTe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6zV-bX-bnO"/>
+                                    <constraint firstAttribute="trailing" secondItem="QtJ-ak-UuI" secondAttribute="trailing" id="SUR-r7-P9v"/>
+                                    <constraint firstItem="QtJ-ak-UuI" firstAttribute="leading" secondItem="uEK-Fy-EFe" secondAttribute="leading" id="Wyb-lo-pPU"/>
+                                    <constraint firstItem="QtJ-ak-UuI" firstAttribute="top" secondItem="uEK-Fy-EFe" secondAttribute="top" id="pXv-yE-gaJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QtJ-ak-UuI" secondAttribute="bottom" id="yLX-H6-AfG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEK-Fy-EFe" secondAttribute="trailing" constant="-20" id="0M8-1L-sN0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uEK-Fy-EFe" secondAttribute="bottom" id="1sG-ik-3nu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uEK-Fy-EFe" secondAttribute="bottom" id="29a-XO-bgh"/>
+                            <constraint firstItem="8qH-CU-3Vn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="64" id="PSG-fh-g96"/>
+                            <constraint firstItem="uEK-Fy-EFe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="SIK-Zp-0Jm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8qH-CU-3Vn" secondAttribute="trailing" constant="-20" id="TbU-1a-KXu"/>
+                            <constraint firstItem="uEK-Fy-EFe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="dzg-q6-Ca0"/>
+                            <constraint firstItem="8qH-CU-3Vn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nWf-D4-S1T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uEK-Fy-EFe" secondAttribute="trailing" constant="-20" id="uMQ-Tf-AFK"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="OUO-f5-Kgj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="Axk-NG-ZHN">
+                            <connections>
+                                <action selector="reload:" destination="BYZ-38-t0r" id="bFG-yK-h5v"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundView" destination="uEK-Fy-EFe" id="e3L-cL-if0"/>
+                        <outlet property="downbtn" destination="QtJ-ak-UuI" id="Ooz-7W-ZrX"/>
+                        <outlet property="progressView" destination="8qH-CU-3Vn" id="acg-zL-n5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1057" y="337"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zcJ-1I-MqW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5WU-1w-ozc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tcg-QQ-WAf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oxN-4f-PAJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yaI-uY-HgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="-355"/>
         </scene>
     </scenes>
 </document>

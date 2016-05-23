@@ -14,6 +14,9 @@
 		2D4460F71CA81A4E0086FDEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D4460F51CA81A4E0086FDEC /* LaunchScreen.storyboard */; };
 		2D4461021CA81A4E0086FDEC /* BB1024Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4461011CA81A4E0086FDEC /* BB1024Tests.swift */; };
 		2D44610D1CA81A4E0086FDEC /* BB1024UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D44610C1CA81A4E0086FDEC /* BB1024UITests.swift */; };
+		2D44611B1CA81A910086FDEC /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D44611A1CA81A910086FDEC /* WebKit.framework */; };
+		2D44611D1CA826F50086FDEC /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 2D44611C1CA826F50086FDEC /* main.js */; };
+		F488DE380864AC4C1FA4C5A6 /* Pods_BB1024.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7570DA9B851FF684684E15BB /* Pods_BB1024.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		2D4461081CA81A4E0086FDEC /* BB1024UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BB1024UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D44610C1CA81A4E0086FDEC /* BB1024UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BB1024UITests.swift; sourceTree = "<group>"; };
 		2D44610E1CA81A4E0086FDEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D44611A1CA81A910086FDEC /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2D44611C1CA826F50086FDEC /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
+		62CE012E2B02C4F96C6197D8 /* Pods-BB1024.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB1024.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BB1024/Pods-BB1024.debug.xcconfig"; sourceTree = "<group>"; };
+		7570DA9B851FF684684E15BB /* Pods_BB1024.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BB1024.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1719B35C544C8654B0EE425 /* Pods-BB1024.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BB1024.release.xcconfig"; path = "Pods/Target Support Files/Pods-BB1024/Pods-BB1024.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D44611B1CA81A910086FDEC /* WebKit.framework in Frameworks */,
+				F488DE380864AC4C1FA4C5A6 /* Pods_BB1024.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +87,13 @@
 		2D4460E01CA81A4E0086FDEC = {
 			isa = PBXGroup;
 			children = (
+				2D44611A1CA81A910086FDEC /* WebKit.framework */,
 				2D4460EB1CA81A4E0086FDEC /* BB1024 */,
 				2D4461001CA81A4E0086FDEC /* BB1024Tests */,
 				2D44610B1CA81A4E0086FDEC /* BB1024UITests */,
 				2D4460EA1CA81A4E0086FDEC /* Products */,
+				51BCA828BD4516EFE778C721 /* Pods */,
+				382CCBEF82F6092AA00D5BC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +116,7 @@
 				2D4460F31CA81A4E0086FDEC /* Assets.xcassets */,
 				2D4460F51CA81A4E0086FDEC /* LaunchScreen.storyboard */,
 				2D4460F81CA81A4E0086FDEC /* Info.plist */,
+				2D44611C1CA826F50086FDEC /* main.js */,
 			);
 			path = BB1024;
 			sourceTree = "<group>";
@@ -125,6 +139,23 @@
 			path = BB1024UITests;
 			sourceTree = "<group>";
 		};
+		382CCBEF82F6092AA00D5BC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7570DA9B851FF684684E15BB /* Pods_BB1024.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51BCA828BD4516EFE778C721 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62CE012E2B02C4F96C6197D8 /* Pods-BB1024.debug.xcconfig */,
+				B1719B35C544C8654B0EE425 /* Pods-BB1024.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D4461111CA81A4E0086FDEC /* Build configuration list for PBXNativeTarget "BB1024" */;
 			buildPhases = (
+				AAA698A85EBFE5A18117387C /* 📦 Check Pods Manifest.lock */,
 				2D4460E51CA81A4E0086FDEC /* Sources */,
 				2D4460E61CA81A4E0086FDEC /* Frameworks */,
 				2D4460E71CA81A4E0086FDEC /* Resources */,
+				20FF5C56ED65D919579003B5 /* 📦 Embed Pods Frameworks */,
+				EBEC3BA3DD21FC8E28242812 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -193,6 +227,7 @@
 				TargetAttributes = {
 					2D4460E81CA81A4E0086FDEC = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = PF3KL9S46D;
 					};
 					2D4460FC1CA81A4E0086FDEC = {
 						CreatedOnToolsVersion = 7.3;
@@ -232,6 +267,7 @@
 				2D4460F71CA81A4E0086FDEC /* LaunchScreen.storyboard in Resources */,
 				2D4460F41CA81A4E0086FDEC /* Assets.xcassets in Resources */,
 				2D4460F21CA81A4E0086FDEC /* Main.storyboard in Resources */,
+				2D44611D1CA826F50086FDEC /* main.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +286,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20FF5C56ED65D919579003B5 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BB1024/Pods-BB1024-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAA698A85EBFE5A18117387C /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBEC3BA3DD21FC8E28242812 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BB1024/Pods-BB1024-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2D4460E51CA81A4E0086FDEC /* Sources */ = {
@@ -397,23 +481,33 @@
 		};
 		2D4461121CA81A4E0086FDEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62CE012E2B02C4F96C6197D8 /* Pods-BB1024.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BB1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ooo.oxo.BB1024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		2D4461131CA81A4E0086FDEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1719B35C544C8654B0EE425 /* Pods-BB1024.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = BB1024/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ooo.oxo.BB1024;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +576,7 @@
 				2D4461131CA81A4E0086FDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D4461141CA81A4E0086FDEC /* Build configuration list for PBXNativeTarget "BB1024Tests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +585,7 @@
 				2D4461161CA81A4E0086FDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2D4461171CA81A4E0086FDEC /* Build configuration list for PBXNativeTarget "BB1024UITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +594,7 @@
 				2D4461191CA81A4E0086FDEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
